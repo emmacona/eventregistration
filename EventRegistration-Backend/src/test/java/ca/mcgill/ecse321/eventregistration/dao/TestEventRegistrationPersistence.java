@@ -48,20 +48,14 @@ public class TestEventRegistrationPersistence {
 		// First example for attribute save/load
 		person.setName(name);
 		
-		// !!!
 		personRepository.save(person);
-		// !!!
 
-//		person = null;
+		person = null;
 
-		// !!!
-		Person person2 = personRepository.findPersonByName(name);
-		// !!!
+		person = personRepository.findPersonByName(name);
 
-		System.out.println(person.getName().equals(person2.getName()));
-		
-//		assertNotNull(person);
-//		assertEquals(name, person.getName());
+		assertNotNull(person);
+		assertEquals(name, person.getName());
 	}
 
 	@Test
