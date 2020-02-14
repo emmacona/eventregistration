@@ -15,8 +15,10 @@ public class EventRegistrationApplication {
 
   @RequestMapping("/")
   public String greeting(){
+
     return "Hello ECSE321!";
   }
 
 }
+
 
